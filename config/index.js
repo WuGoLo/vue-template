@@ -8,8 +8,8 @@ module.exports = {
   dev: {
 
     // Paths
-    assetsSubDirectory: './static', // 子目录---解决css相对路径的问题
-    assetsPublicPath: './', //资源专用路径---解决JS路径问题
+    assetsSubDirectory: 'static', // 子目录---解决css相对路径的问题
+    assetsPublicPath: '/', //资源专用路径---解决JS路径问题
     proxyTable: {},
 
     // Various Dev Server settings
@@ -49,7 +49,7 @@ module.exports = {
 
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
-    assetsSubDirectory: './static',
+    assetsSubDirectory: 'static',
     assetsPublicPath: './',
 
     /**

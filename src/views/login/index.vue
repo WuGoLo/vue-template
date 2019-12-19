@@ -2,10 +2,13 @@
   <div class="login-container">
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" auto-complete="on" label-position="left">
       <div class="title-container">
-        <i class="icon-logo" style="font-size:90px;"></i>
+        <!-- <i class="icon-logo" style="font-size:90px;"></i> -->
+        <a href="/map">
+          <img src="/static/images/logo.png" alt="logo" width="110">
+        </a>
       </div>
       <div class="title-container">
-        <h3 class="title">中心局退休职工管理系统</h3>
+        <h3 class="title">VUE后台项目初始化</h3>
       </div>
       <el-form-item prop="username">
         <span class="svg-container svg-container_login">

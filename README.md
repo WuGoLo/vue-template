@@ -63,16 +63,32 @@ if (options.extract) {
 【config/index.js 文件】
 
 ```js
-// 找到build 
+// dev修改为 
 build: {
    assetsSubDirectory: 'static',
     assetsPublicPath: '/',
  }
-// 修改为
+// pro修改为
 build: {
-   assetsSubDirectory: './static',// 子目录---解决css相对路径的问题
+   assetsSubDirectory: 'static',// 子目录---解决css相对路径的问题
    assetsPublicPath: './', //资源专用路径---解决JS路径问题
  }
+```
+
+【build/utils.js】
+
+```js
+// Extract CSS when that option is specified
+// (which is the case during production build)
+if (options.extract) {
+    return ExtractTextPlugin.extract({
+    use: loaders,
+    fallback: 'vue-style-loader',
+    publicPath: '../../' //新增这一句,作用是设置打包过程中提取CSS的方法
+    })
+} else {
+    return ['vue-style-loader'].concat(loaders)
+}
 ```
 参考博客链接：
 https://www.cnblogs.com/zhaowy/p/10072570.html
