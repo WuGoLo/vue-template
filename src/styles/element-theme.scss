@@ -1,0 +1,114 @@
+
+// /* 改变 icon 字体路径变量，必需 */
+// $--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+// @import "~element-ui/packages/theme-chalk/src/index";
+$menu_textcolor: #909399;
+// element.style默认样式修改
+#app .el-container .el-aside {
+  width: 224px !important;
+  background-color:#25282b;
+}
+// menu菜单样式重置
+.el-menu-vertical-demo {
+  border-right: none;
+}
+.submenu-title {
+  color: $menu_textcolor;
+  background-color: #25282b !important;
+  padding: 0 20px;
+  &:hover {
+    color: #fff;
+    i {
+      color: #fff;
+    }
+    background-color: #0090aa !important;
+  }
+}
+.el-menu-item-group__title {
+  display: none;
+}
+.el-menu-item-group .el-menu-item {
+  padding-left: 52px !important;
+}
+.el-menu-item, .el-submenu__title {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 !important;
+}
+.el-submenu .el-menu-item {
+  height: 36px;
+  line-height: 36px;
+  background-color:#1c1e1f !important;
+  &:hover {
+    i {
+      color: #fff;
+    }
+    background-color: #181a1b !important;
+  }
+}
+.el-submenu .el-menu-item.is-active {
+  background-color: #181a1b !important;
+}
+// 面包屑
+.el-breadcrumb {
+  padding: 20px;
+}
+// 所有弹出框中的表单组件、输入框、下拉、日期选择框样式重置
+.el-dialog__body {
+  .el-input--medium,
+  .el-select,
+  .el-date-editor--daterange.el-input__inner {
+    width: 100% !important;
+  }
+}
+.el-dialog__footer {
+  text-align: center;
+}
+
+// 登陆页
+$bg:#2d3a4b;
+/* reset element-ui css */
+input:-webkit-autofill , textarea:-webkit-autofill, select:-webkit-autofill {
+	-webkit-text-fill-color: $menu_textcolor !important;
+	-webkit-box-shadow: 0 0 0px 1000px transparent  inset !important;
+  background-color:transparent;
+  background-image: none;
+  transition: background-color 50000s ease-in-out 0s; //背景色透明  生效时长  过渡效果  启用时延迟的时间
+}
+input {
+	 background-color:transparent;
+}
+.login-container {
+  .el-input {
+    display: inline-block;
+    height: 47px;
+    width: 85%;
+    input {
+      background: transparent;
+      border: 0px;
+      -webkit-appearance: none;
+      border-radius: 0px;
+      padding: 12px 5px 12px 15px;
+      height: 47px;
+    }
+  }
+  .el-form-item--medium .el-form-item__content,
+  .el-form-item--medium .el-form-item__label {
+    background-color: #fff;
+    border: none;
+  }
+  .el-input.el-input--medium {
+    background-color: #fff !important;
+  }
+  .el-form-item {
+    border-bottom: 1px solid #0090aa;
+    background: #fff;
+    border-radius: 5px;
+    color: #454545;
+  }
+}
+
+.el-tabs--border-card {
+  box-shadow: none;
+}
